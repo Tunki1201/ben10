@@ -19,7 +19,7 @@ const TokenomicsPage = () => {
                                     textStroke: '1px black'
                                 }}
                                 >
-                                    tokenomics
+                                    Tokenomics
                                 </h1>
                                 </Bounce>
                             </div>

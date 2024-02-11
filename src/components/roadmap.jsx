@@ -28,7 +28,7 @@ const RoadmapPage = () => {
                                                     textStroke: '1px black'
                                                 }}
                                             >
-                                                roadmap
+                                                Roadmap
                                             </h1>
                                         </Bounce>
                                     </div>

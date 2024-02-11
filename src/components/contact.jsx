@@ -26,7 +26,7 @@ const ContactPage = () => {
                                             textStroke: '1px black', // For other browsers
                                         }}
                                     >
-                                        contact
+                                        Contact
                                     </h1>
                                 </Bounce>
                             </div>
@@ -34,7 +34,7 @@ const ContactPage = () => {
 
                     }
 
-                    <img src="/images/ben10/logo.png" className="max-w-[210px] mt-[20px]" alt="" style={{ border: '1px solid #328336', borderRadius: '0.5rem' }} />
+                    <img src="/images/ben10/logo.png" className="max-w-[210px] mt-[20px]" alt=""  />
 
                     <div className="flex flex-row items-center mt-4">
                         <a href={twitter}>

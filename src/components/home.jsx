@@ -4,12 +4,12 @@ import CurrencyItem from './CurrencyItem';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useContractRead, useContractWrite } from 'wagmi';
 import { PRESALE_CONTRACT_ADDRESS, USDT_CONTRACT_ADDRESS } from '../utils/env';
-
+import * as antdModel from "../utils/antdmodal.css";
 import * as  presaleContractABI from '../token_presale_abi.json';
 import * as  erc20ContractABI from '../token_abi.json';
 import { useCallback } from 'react';
 import { parseEther } from 'viem';
-
+import { Input, Modal, Button } from "antd";
 import { InView } from "react-intersection-observer";
 import { Zoom, Fade, Bounce } from 'react-reveal';
 
@@ -40,7 +40,8 @@ const HomePage = () => {
     const handleCurrencyClick = (currency) => {
         setSelectedCurrency(currency);
     };
-
+    const [isShowConnectWalletModalOpen, setIsShowConnectWalletModalOpen] =
+        React.useState(false);
     const [value, setValue] = React.useState(0);
 
     const [dominoValue, setDominoValue] = React.useState(0);
@@ -64,7 +65,15 @@ const HomePage = () => {
     }, [buyTokens, buyWithUSDT, approve, value])
 
     const [show, setShow] = React.useState(false);
-    
+
+    const handleConnectWalletModalShow = () => {
+        setIsShowConnectWalletModalOpen(true);
+    };
+
+    const handleConnectWalletModalShowCancel = () => {
+        setIsShowConnectWalletModalOpen(false);
+    };
+
     const openBuyModal = () => (
         console.log('1')
     )
@@ -92,8 +101,27 @@ const HomePage = () => {
                                 <div className='buy-usdt flex flex-col items-center justify-center border border-black rounded-[1rem] mx-auto border-3'>
                                     <div className='bg-[#fff] flex flex-col items-center rounded-t-[1rem] w-full'>
                                         <div className='flex flex-col items-center justify-center px-8 py-2'>
-                                            <span className='flex text-black' style={{ fontFamily: 'Might', fontWeight: '700', fontSize: '32px' }}>Stage Selling Fast 🔥</span>
-
+                                            <span className='flex text-black' style={{ fontFamily: 'Might', fontWeight: '700', fontSize: '22px' }}>$BEN10 PUBLIC-SALE ENDS IN</span>
+                                            <span className=' w-full flex justify-center items-center gap-4'>
+                                                <span className=' flex flex-col justify-center items-center'>
+                                                    <span className=' mt-4 w-[60px] h-[60px] flex justify-center items-center rounded-[10px]' style={{ border: '2px solid #328336', fontSize: '30px', fontWeight: 'bold', color: '#328336' }}>
+                                                        00
+                                                    </span>
+                                                    <span className='' style={{ fontSize: "12px", fontWeight: 'bold' }}>HOURS</span>
+                                                </span>
+                                                <span className=' flex flex-col justify-center items-center'>
+                                                    <span className=' mt-4 w-[60px] h-[60px] flex justify-center items-center rounded-[10px]' style={{ border: '2px solid #328336', fontSize: '30px', fontWeight: 'bold', color: '#328336' }}>
+                                                        00
+                                                    </span>
+                                                    <span className='' style={{ fontSize: "12px", fontWeight: 'bold' }}>MINUTES</span>
+                                                </span>
+                                                <span className=' flex flex-col justify-center items-center'>
+                                                    <span className=' mt-4 w-[60px] h-[60px] flex justify-center items-center rounded-[10px]' style={{ border: '2px solid #328336', fontSize: '30px', fontWeight: 'bold', color: '#328336' }}>
+                                                        00
+                                                    </span>
+                                                    <span className='' style={{ fontSize: "12px", fontWeight: 'bold' }}>SECONDS</span>
+                                                </span>
+                                            </span>
                                             <span className='flex mt-2 text-black' style={{ fontFamily: 'Might', fontSize: '1.6rem' }}>
                                                 RAISED
                                                 <span style={{ fontFamily: 'Might', fontSize: '1.05em', fontWeight: '700' }}>
@@ -102,7 +130,7 @@ const HomePage = () => {
                                                 / $50,000.00
                                             </span>
 
-                                            <ProgressBar animated now={50} variant="danger" style={{ width: '100%', border: 'solid 1px'}} className='mt-4' />
+                                            <ProgressBar animated now={50} variant="danger" style={{ width: '100%', border: 'solid 1px' }} className='mt-4' />
 
                                         </div>
                                     </div>
@@ -209,7 +237,7 @@ const HomePage = () => {
                                                         {(() => {
                                                             if (!connected) {
                                                                 return (
-                                                                    <button onClick={openConnectModal} type="button" style={{ fontFamily: 'Might', boxShadow: 'rgb(0 0 0 / 98%) 3px 3px 3px 3px', fontSize: '20px', marginBottom: '1rem' }} className="flex p-2 bg-[#64cc4f] text-black items-center justify-center focus:outline-none border rounded-[0.5rem] w-full hover:bg-[#328336]">
+                                                                    <button onClick={handleConnectWalletModalShow} type="button" style={{ fontFamily: 'Might', boxShadow: 'rgb(0 0 0 / 98%) 3px 3px 3px 3px', fontSize: '20px', marginBottom: '1rem', transition: '0.1s' }} className="flex p-2 bg-[#64cc4f] text-black items-center justify-center focus:outline-none border rounded-[0.5rem] w-full hover:bg-[#328336]">
                                                                         Connect Wallet
                                                                     </button>
                                                                 );
@@ -289,9 +317,9 @@ const HomePage = () => {
                                 {
                                     show && (
                                         <Fade right cascade>
-                                            <p className="text-white text-[28px] mt-[10px] md:text-left" style={{ fontFamily: 'Mansalva' }}>
-                                                Welcome to our presale event, where the bold meet the daring, and crypto gets a devilish twist.
-                                                Join us, and let's stir up some digital mayhem together.
+                                            <p className="text-white text-[28px] mt-[10px] md:text-left w-full" style={{ fontFamily: 'Mansalva' }}>
+                                                Welcome to our presale event, where the bold meet the daring, and crypto gets a devilish twist.<br></br>
+                                                Join us, and let's stir up some digital mayhem together
                                             </p>
                                         </Fade>
                                     )
@@ -302,6 +330,77 @@ const HomePage = () => {
                         </div>
                     </div>
                 </div>
+                {isShowConnectWalletModalOpen && (
+                    <Modal
+                        title=""
+                        className={{ antdModel }}
+                        open={isShowConnectWalletModalOpen}
+                        style={{ marginTop: "150px" }}
+                        width={"450px"}
+                        closeIcon={null}
+                        onCancel={handleConnectWalletModalShowCancel}
+                        footer={null}
+                    >
+                        <div
+                            className="flex items-center justify-center w-full"
+                            style={{ backgroundColor: "#328336" }}
+                        >
+                            <div className=" w-[80%]">
+                                <div className=" w-full mt-6">
+                                    <span className=" text-center text-[25px] text-white">
+                                        CHOOSE WALLET
+                                    </span>
+                                </div>
+                                <hr className=" mt-[20px] text-white" />
+                                <div className="w-[90%] m-auto flex justify-center items-center flex-col">
+                                    <a
+                                        className=" p-3 w-full h-auto mt-1 no-underline flex justify-center items-center gap-2"
+                                        style={{ border: "1px solid white" }}
+                                    >
+                                        <img
+                                            src="https://kndonsolana.com/assets/wallets/phantom.png"
+                                            width="30px;"
+                                        />
+                                        &nbsp;&nbsp;&nbsp;
+                                        <b className=" text-[17px] w-auto text-white hover:text-[#64cc4f]">
+                                            PHANTOM
+                                        </b>
+                                        &nbsp;&nbsp;&nbsp;
+                                    </a>
+                                    <br />
+                                    <a
+                                        className=" mt-2 p-3 w-full h-auto no-underline flex justify-center items-center gap-2"
+                                        style={{ border: "1px solid white" }}
+                                    >
+                                        <img
+                                            src="https://kndonsolana.com/assets/wallets/solflare.png"
+                                            width="30px;"
+                                        />
+                                        &nbsp;&nbsp;&nbsp;
+                                        <b className=" text-[17px] w-auto text-white hover:text-[#64cc4f]">
+                                            SOLFLARE
+                                        </b>
+                                        &nbsp;&nbsp;&nbsp;
+                                    </a>
+                                    <hr className=" mt-[30px] w-full text-white" />
+                                    <div
+                                        align="center"
+                                        className=" mb-3 text-[16px]  text-gray-300"
+                                    >
+                                        Dont have a wallet?{" "}
+                                        <a
+                                            target="_blank"
+                                            className=" no-underline text-[#2327ff]"
+                                            href="https://phantom.app/download"
+                                        >
+                                            Create one.
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </Modal>
+                )}
             </div>
 
             {/* <img src="/images/FIRELINE.svg" alt="gapimage" /> */}

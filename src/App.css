@@ -39,15 +39,15 @@
 }
 
 @font-face {
-  font-family: 'Genty Demo';
+  font-family: sans-serif;
   font-style: normal;
   font-weight: 600;
-  src: local('Genty Demo'), url('https://fonts.cdnfonts.com/s/59891/GentyDemo-Regular.woff') format('woff');
+  /* src: local('Genty Demo'), url('https://fonts.cdnfonts.com/s/59891/GentyDemo-Regular.woff') format('woff'); */
 }
 
 @font-face {
-  font-family: 'Evermore';
+  font-family: sans-serif;
   font-style: normal;
   font-weight: 600;
-  src: local('Evermore'), url('https://fonts.cdnfonts.com/s/96082/Evermore-WyDmO.woff') format('woff');
+  /* src: local('Evermore'), url('https://fonts.cdnfonts.com/s/96082/Evermore-WyDmO.woff') format('woff'); */
 }

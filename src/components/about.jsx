@@ -28,7 +28,7 @@ const AboutPage = () => {
                                         fontFamily: 'Smack', fontWeight: '600', WebkitTextStroke: '1px black',
                                         textStroke: '1px black'
                                     }}>
-                                        about
+                                        About
                                     </span>
                                 </Fade>
                             )
@@ -39,8 +39,8 @@ const AboutPage = () => {
                                 show && (
                                     <Fade right cascade>
                                         <p className="text-white text-[23px] break-all" style={{ marginTop: '2rem', fontFamily: 'Mansalva' }}>
-                                            Ben10 is weary of the mind-numbing parade of trash coins, steps into the limelight. It's time for
-                                            the world's most mischievous meme to reign superme.
+                                            Ben10 is weary of the mind-numbing parade of<br></br> trash coins, steps into the limelight. <br></br>
+                                            It's time for the world's most mischievous meme to reign superme.
                                         </p>
                                     </Fade>
                                 )
@@ -52,11 +52,15 @@ const AboutPage = () => {
                                 show && (
                                     <Fade right cascade>
                                         <p className="text-white text-[23px]" style={{ fontFamily: 'Mansalva' }}>
-                                            Ben10 didn't tiptoe into the scene. Launched in a presale blitz, free from the clutches of
+                                            Ben10 didn't tiptoe into the scene. Launched in<br></br> a presale blitz, free from the clutches of
                                             preordained deals, unburdened by taxes, with the LP incinerated, and the contract cast into the
                                             abyss, this coin thrives on controversy. It's not a just a coin; it's a definance. A railying cry
-                                            against the mundane, a declaration of rebellion. In a word saturated with the uninspired. $DOMI emerges
-                                            as a beacon of audacity. Let the Ben10 effect commence.
+                                            against the mundane, a declaration of rebellion. <br></br>
+                                            In a word saturated with the uninspired.
+                                            <br></br> 
+                                            $DOMI emerges
+                                            as a beacon of audacity. <br></br>
+                                            Let the Ben10 effect commence.
                                         </p>
                                     </Fade>
                                 )

@@ -20,7 +20,7 @@ const HowToBuyPage = () => {
                                         textStroke: '1px black'
                                     }}
                                 >
-                                    how to buy
+                                    How to buy
                                 </h2>
                             </Fade>
                         )
@@ -50,7 +50,7 @@ const HowToBuyPage = () => {
                         <div
                             className="w-full mt-[50px] px-[30px] py-[30px] md:pl-[60px] md:pr-[20px] md:py-[30px] border-[1px] border-[#fff] flex flex-col items-center md:flex-row justify-center md:justify-between md:flex-nowrap bg-[#328336] rounded-tr-[30px] rounded-bl-[30px]">
                             <div className="mr-0 w-[200px] mb-[30px] md:mb-0 md:mr-[30px]">
-                                <img src="./images/how-to-buy/02.png" className="w-full min-w-[138px]" alt="" />
+                                <img src="./images/ben10/solana.png" className="w-full min-w-[138px]" alt="" />
                             </div>
                             <div className="flex flex-col justify-center">
                                 <h3 className="text-white text-[23px] evermore mb-[25px]" style={{ fontFamily: 'Smack' }}>Secure Some ETH</h3>
@@ -66,7 +66,7 @@ const HowToBuyPage = () => {
                         <div
                             className="w-full mt-[50px] px-[30px] py-[30px] md:pl-[60px] md:pr-[20px] md:py-[30px] border-[1px] border-[#fff] flex flex-col items-center md:flex-row justify-center md:justify-between md:flex-nowrap bg-[#328336] rounded-tr-[30px] rounded-bl-[30px]">
                             <div className="mr-0 w-[200px] mb-[30px] md:mb-0 md:mr-[30px]">
-                                <img src="./images/how-to-buy/03.png" className="w-full min-w-[138px]" alt="" />
+                                <img src="./images/ben10/uniswap.png" className="w-full min-w-[138px]" alt="" />
                             </div>
                             <div className="flex flex-col justify-center">
                                 <h3 className="text-white text-[23px] evermore mb-[25px]" style={{ fontFamily: 'Smack' }}>Embark on Your Quest</h3>
@@ -82,10 +82,10 @@ const HowToBuyPage = () => {
                     <Slide right when={show}>
                         <div
                             className="w-full mt-[50px] px-[30px] py-[30px] md:pl-[60px] md:pr-[20px] md:py-[30px] border-[1px] border-[#fff] flex flex-col items-center sm:flex-row justify-center md:justify-between md:flex-nowrap bg-[#328336] rounded-tr-[30px] rounded-bl-[30px]">
-                            <div className="mr-0 w-[200px] mb-[30px] md:mb-0 md:mr-[30px]">
-                                <img src="./images/how-to-buy/04.png" className="w-full min-w-[140px] h-full" alt="" />
+                            <div className="mr-0 w-[200px] mb-[30px] md:mb-0 md:mr-[30px] ml-[-45px]">
+                                <img src="./images/ben10/s-b.png" className="w-full min-w-[200px] h-full" alt="" />
                             </div>
-                            <div className="flex flex-col justify-center">
+                            <div className="flex flex-col justify-center ml-[-10px]">
                                 <h3 className="text-white text-[23px] evermore mb-[25px]" style={{ fontFamily: 'Smack' }}>Trade ETH for $Ben10</h3>
                                 <p className="text-white text-[19px]" style={{ fontFamily: 'Mansalva' }}>
                                     Exchange your ETH for $Ben10. We've slashed taxes to ZERO, so no need to stress about specific slippages.
@@ -94,19 +94,7 @@ const HowToBuyPage = () => {
                             </div>
                         </div>
                     </Slide>
-
-                    <div className="flex flex-col items-center justify-between mt-12 md:flex-row">
-                        
-                        <Fade left cascade>
-                            <img src="./images/ben10/pngwing9.png" className="hidden md:block mt-[-30px] max-w-[520px] max-h-[480px]" alt="" />
-                        </Fade>
-
-                        <Fade right cascade>
-                            <img src="./images/ben10/pngwing.com.png" className="md:mt-[-30px] max-w-[440px] max-h-[400px]" alt="" />
-                        </Fade>
-
-                    </div>
-
+            
                 </div>
             </div>
 

@@ -12,8 +12,8 @@ import RoadmapPage from "./components/roadmap";
 import ContactPage from "./components/contact";
 import FooterPage from "./components/footer";
 import Loader from "./components/Loader";
-import Airdrop from "./components/airdrop";
-
+import FaqPage from "./components/faq";
+import NftCollectiblesPage from './components/nftCollectibles';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@rainbow-me/rainbowkit/styles.css';
 
@@ -129,10 +129,14 @@ const App = () => {
               <AboutPage />
 
               <HowToBuyPage />
+              
+              <NftCollectiblesPage />
 
               <TokenomicsPage />
 
               <RoadmapPage />
+
+              <FaqPage />
 
             </div>
 
@@ -146,7 +150,6 @@ const App = () => {
               <FooterPage />
 
             </div>
-            <Routes path="/airdrop" element={<Airdrop />}></Routes>
           </BrowserRouter>
 
         </RainbowKitProvider>
